@@ -5,6 +5,6 @@ intro_image_absolute: true
 intro_image_hide_on_mobile: true
 ---
 
-# Serif - A Gatsby Business Theme.
+# Providing customer centric software services
 
-Serif contains content types for a typical business website. The theme is fully responsive, blazing fast and artfully illustrated.
+Providing a range of software services to meet the needs of our clients now and in the future. 
