@@ -47,7 +47,7 @@ const Home = props => {
                   <div className="service service-summary">
                     <div className="service-content">
                       <h2 className="service-title">
-                        <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+                        {node.frontmatter.title}
                       </h2>
                       <p>{node.excerpt}</p>
                     </div>
@@ -55,36 +55,11 @@ const Home = props => {
                 </div>
               ))}
             </div>
-            <div className="row justify-content-center">
-              <div className="col-auto">
-                <Link className="button button-primary" to="/services/">View All Services</Link>
-              </div>
-            </div>
           </div>
         </div>
       )}
 
-      {features.length > 0 && (
-        <div className="strip strip-grey">
-          <div className="container pt-6 pb-6 pt-md-10 pb-md-10">
-            <div className="row justify-content-center">
-              {features.map(({ node }) => (
-                <div key={node.id} className="col-12 col-md-6 col-lg-4 mb-2">
-                  <div className="feature">
-                    {node.image && (
-                      <div className="feature-image">
-                        <img src={node.image} />
-                      </div>
-                    )}
-                    <h2 className="feature-title">{node.title}</h2>
-                    <div className="feature-content">{node.description}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
+
     </Layout>
   );
 };
@@ -115,7 +90,6 @@ export const query = graphql`
     ) {
         html
         frontmatter {
-          image
           intro_image
           intro_image_absolute
           intro_image_hide_on_mobile
